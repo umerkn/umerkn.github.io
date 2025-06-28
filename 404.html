@@ -2,19 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>404 - Page Not Found | Umer Khan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 – Not Found</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .not-found {
+        text-align: center;
+        margin-top: 4rem;
+        padding: 2rem;
+      }
+
+      .terminal {
+        font-family: "Roboto Mono", monospace;
+        background: var(--bg-secondary);
+        display: inline-block;
+        padding: 1rem;
+        border-radius: var(--radius);
+        color: var(--text);
+        border: 1px solid var(--border);
+      }
+
+      .button.secondary {
+        margin-top: 2rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid var(--text);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .button.secondary:hover {
+        background: var(--text);
+        color: var(--bg);
+      }
+    </style>
   </head>
   <body>
     <nav class="top-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li>
@@ -37,41 +72,18 @@
       </ul>
     </nav>
 
-    <main
-      style="
-        max-width: 600px;
-        margin: 6rem auto;
-        text-align: center;
-        padding: 0 1rem;
-      "
-    >
-      <h1 style="font-size: 4rem; margin-bottom: 1rem">404</h1>
-      <h2 style="font-weight: 600; margin-bottom: 1rem">Page Not Found</h2>
-      <p style="margin-bottom: 2rem; color: var(--muted); font-size: 1.1rem">
-        Sorry, the page you’re looking for doesn’t exist or has been moved.
-      </p>
-      <a
-        href="index.html"
-        class="project-button"
-        style="font-size: 1rem; padding: 0.6rem 1.2rem"
-      >
-        Go back home
-      </a>
+    <main class="not-found">
+      <h1>404 – Not Found</h1>
+      <div class="terminal">
+        $ cd /page-not-found<br />
+        bash: cd: /page-not-found: No such file or directory
+      </div>
+      <br />
+      <a href="index.html" class="button secondary">← Go Home</a>
     </main>
 
-    <footer
-      style="
-        margin-top: 6rem;
-        text-align: center;
-        font-size: 0.9rem;
-        padding-bottom: 2rem;
-        border-top: 1px solid var(--border);
-      "
-    >
-      <p>
-        <img src="assets/icons/email.png" alt="Email" class="icon" />
-        <a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a>
-      </p>
+    <footer>
+      <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>

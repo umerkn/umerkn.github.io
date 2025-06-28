@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -15,30 +15,16 @@
     <nav class="top-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html" aria-current="page">Resources</a></li>
-        <li>
-          <a
-            href="https://github.com/umerkn"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/umerkn"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-        </li>
+        <li><a href="contact.html">Contact</a></li>
         <li><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
       </ul>
     </nav>
 
     <header class="hero compact">
-      <h1>Resources</h1>
+      <h1>Learning Materials</h1>
       <p class="tagline">
         Helpful stuff for classmates, friends, and future me
       </p>
@@ -47,24 +33,63 @@
     <main>
       <section class="learning-section">
         <p>
-          This space is for notes, links, and concepts I'm learning as I go.
-          Planning to share things that helped me understand topics better,
-          especially during my first year.
+          Notes, links, and concepts I'm learning as I go. I’ll keep adding
+          helpful tools and references over time.
         </p>
+
+        <h2>Resources</h2>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-content">
+              <h3>Kimberly Brehm's Discrete Math Playlist</h3>
+              <p>
+                A great video series I used during my first semester to grasp
+                discrete mathematics concepts clearly and at my own pace.
+              </p>
+              <a
+                href="https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+              >
+                Watch on YouTube →
+              </a>
+            </div>
+          </div>
+
+          <!--
+          <div class="card">
+            <div class="card-content">
+              <h3>Title of the Resource</h3>
+              <p>
+                Short description of the resource and why it's helpful.
+              </p>
+              <a
+                href="https://example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+              >
+                View Resource →
+              </a>
+            </div>
+          </div>
+          -->
+        </div>
+
         <p>
-          Check back later, or
-          <a href="mailto:umerkn404@gmail.com">send me a good resource</a> if
-          you've got one.
+          Got something useful? Feel free to
+          <a href="mailto:umerkn404@gmail.com">send me a resource</a>.
         </p>
-        <p><a href="index.html">← Back to home</a></p>
+
+        <p>
+          <a href="index.html" class="button secondary">← Back to Home</a>
+        </p>
       </section>
     </main>
 
     <footer>
-      <p>
-        <img src="assets/icons/email.png" alt="Email" class="icon" />
-        <a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a>
-      </p>
+      <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
