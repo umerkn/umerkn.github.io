@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Umer Khan</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="color-scheme" content="dark light" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">
+      <img
+        src="assets/icons/sun.png"
+        alt="Toggle theme"
+        class="icon"
+        id="theme-icon"
+      />
+    </button>
+
     <header class="hero compact">
       <div class="hero-content">
         <img src="assets/profile.jpg" alt="Umer Khan" class="profile-img" />
@@ -100,5 +112,7 @@
       <p>Made this myself. Still learning. Always will be.</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
+
+    <script src="theme.js"></script>
   </body>
 </html>

@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog – Umer Khan</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="color-scheme" content="dark light" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <button id="theme-toggle" class="icon-toggle" aria-label="Toggle theme">
+      <img
+        src="assets/icons/sun.png"
+        alt="Toggle theme"
+        class="icon"
+        id="theme-icon"
+      />
+    </button>
+
     <header class="hero">
       <h1>Blog</h1>
       <p class="tagline">Notes, ideas, and things I’m figuring out</p>
@@ -41,5 +53,7 @@
       <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
+
+    <script src="theme.js"></script>
   </body>
 </html>
