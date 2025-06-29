@@ -1,26 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const toggleBtn = document.getElementById("theme-toggle");
-  const iconImg = toggleBtn.querySelector("img");
 
-  if (!toggleBtn || !iconImg) return;
+  const saved = localStorage.getItem("theme");
+  const light =
+    saved === "light" ||
+    (!saved && window.matchMedia("(prefers-color-scheme: light)").matches);
 
-  const setIcon = (isLight) => {
-    iconImg.src = isLight ? "assets/icons/moon.svg" : "assets/icons/sun.svg";
-    iconImg.alt = isLight ? "Switch to dark theme" : "Switch to light theme";
-  };
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
+  if (light) {
     root.classList.add("light");
-    setIcon(true);
   } else {
-    setIcon(false);
+    root.classList.remove("light");
   }
 
   toggleBtn.addEventListener("click", () => {
     const isLight = root.classList.toggle("light");
     localStorage.setItem("theme", isLight ? "light" : "dark");
-    setIcon(isLight);
   });
+
+  root.classList.add("ready");
 });

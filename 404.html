@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme");
+          const prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)"
+          ).matches;
+          if (theme === "light" || (!theme && prefersLight)) {
+            document.documentElement.classList.add("light");
+          }
+        } catch {}
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Page not found – Umer Khan" />
@@ -9,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -36,7 +50,16 @@
             aria-label="Toggle theme"
             title="Toggle theme"
           >
-            <img src="assets/icons/sun.svg" alt="Toggle theme" class="icon" />
+            <img
+              src="assets/icons/sun.svg"
+              alt="Light mode"
+              class="icon sun-icon"
+            />
+            <img
+              src="assets/icons/moon.svg"
+              alt="Dark mode"
+              class="icon moon-icon"
+            />
           </button>
         </li>
       </ul>
@@ -57,35 +80,23 @@
     <footer>
       <div class="social-icons">
         <a href="mailto:umerkn404@gmail.com" aria-label="Email">
-          <img
-            src="assets/icons/envelope-simple.svg"
-            alt="Email"
-            class="social-icon"
-          />
+          <img src="assets/icons/envelope-simple.svg" alt="Email" />
         </a>
         <a
           href="https://github.com/umerkn"
-          aria-label="GitHub"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          aria-label="GitHub"
         >
-          <img
-            src="assets/icons/github-logo.svg"
-            alt="GitHub"
-            class="social-icon"
-          />
+          <img src="assets/icons/github-logo.svg" alt="GitHub" />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
-          aria-label="LinkedIn"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          aria-label="LinkedIn"
         >
-          <img
-            src="assets/icons/linkedin-logo.svg"
-            alt="LinkedIn"
-            class="social-icon"
-          />
+          <img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" />
         </a>
       </div>
       <p>Made with ❤️</p>

@@ -233,42 +233,22 @@ footer .social-icons a:hover img {
   opacity: 0.8;
 }
 
-#theme-toggle {
+.button.secondary {
+  margin-top: 2rem;
+  display: inline-block;
   font-size: 0.9rem;
-  font-family: var(--font-mono);
+  text-decoration: none;
   color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--text);
+  padding: 0.5rem 1rem;
   border-radius: var(--radius);
   transition: background 0.2s ease, color 0.2s ease;
+  font-family: var(--font-mono);
 }
 
-#theme-toggle:hover {
-  background: var(--hover-bg);
-}
-
-#theme-toggle img {
-  width: 1.4rem;
-  height: 1.4rem;
-  vertical-align: middle;
-  filter: invert(1) brightness(1.2);
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-#theme-toggle:hover img {
-  opacity: 0.8;
-  filter: invert(1) brightness(1.1);
-}
-
-.light #theme-toggle img,
-.light #theme-toggle:hover img {
-  filter: none;
-  opacity: 0.8;
+.button.secondary:hover {
+  background: var(--text);
+  color: var(--bg);
 }
 
 main.not-found {
@@ -287,24 +267,6 @@ main.not-found {
   color: var(--text);
   border: 1px solid var(--border);
   margin-top: 1.5rem;
-}
-
-.button.secondary {
-  margin-top: 2rem;
-  display: inline-block;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--text);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  transition: background 0.2s ease, color 0.2s ease;
-  font-family: var(--font-mono);
-}
-
-.button.secondary:hover {
-  background: var(--text);
-  color: var(--bg);
 }
 
 .light {
@@ -344,4 +306,44 @@ main.not-found {
   main {
     padding: 2rem 1rem;
   }
+}
+
+#theme-toggle img {
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+
+#theme-toggle:hover .sun-icon,
+#theme-toggle:hover .moon-icon {
+  opacity: 0.8;
+}
+
+#theme-toggle .sun-icon,
+#theme-toggle .moon-icon {
+  display: none;
+  visibility: hidden;
+}
+
+.ready #theme-toggle .sun-icon {
+  display: block;
+  visibility: visible;
+  filter: invert(1) brightness(1.2);
+}
+
+.ready.light #theme-toggle .sun-icon {
+  display: none;
+  visibility: hidden;
+}
+
+.ready #theme-toggle .moon-icon {
+  display: none;
+  visibility: hidden;
+}
+
+.ready.light #theme-toggle .moon-icon {
+  display: block;
+  visibility: visible;
+  filter: none;
 }
