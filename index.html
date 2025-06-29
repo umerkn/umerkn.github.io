@@ -16,7 +16,6 @@
         } catch {}
       })();
     </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -26,7 +25,6 @@
     <meta name="author" content="Umer Khan" />
     <meta name="robots" content="index, follow" />
     <title>Umer Khan</title>
-
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,7 +33,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
     <meta property="og:title" content="Umer Khan" />
     <meta
       property="og:description"
@@ -45,11 +42,23 @@
     <meta property="og:url" content="https://yourdomain.com/" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-
   <body>
     <nav class="top-nav">
       <a href="/" class="logo">Umer Khan</a>
-      <ul>
+      <button
+        class="mobile-menu-toggle"
+        aria-label="Toggle menu"
+        title="Toggle menu"
+      >
+        <img
+          src="assets/icons/menu.svg"
+          alt="Menu"
+          width="24"
+          height="24"
+          loading="lazy"
+        />
+      </button>
+      <ul class="nav-links">
         <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -79,14 +88,12 @@
         </li>
       </ul>
     </nav>
-
     <header class="hero compact fade-in">
       <h1>Hi, I’m Umer</h1>
       <p class="tagline">
         First-year AI student exploring code, Linux, and ideas.
       </p>
     </header>
-
     <main>
       <section class="about fade-in">
         <h2>About Me</h2>
@@ -101,7 +108,6 @@
           working on something interesting, I'm probably curious about it.
         </p>
       </section>
-
       <section class="projects-overview fade-in">
         <h2>Projects</h2>
         <div class="card-group">
@@ -115,7 +121,6 @@
           </article>
         </div>
       </section>
-
       <section class="more-section fade-in">
         <h2>More from Me</h2>
         <div class="card-group">
@@ -139,7 +144,6 @@
         </div>
       </section>
     </main>
-
     <footer class="fade-in">
       <div class="social-icons">
         <a href="mailto:umerkn404@gmail.com" aria-label="Email">
@@ -173,9 +177,8 @@
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
-
     <script src="scripts/theme.js"></script>
-
+    <script src="scripts/menu.js"></script>
     <noscript>
       <style>
         #theme-toggle {

@@ -57,9 +57,24 @@
 
   <body>
     <nav class="top-nav">
-      <a href="index.html" class="logo">Umer Khan</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
+      <a href="/" class="logo">Umer Khan</a>
+
+      <button
+        class="mobile-menu-toggle"
+        aria-label="Toggle menu"
+        title="Toggle menu"
+      >
+        <img
+          src="assets/icons/menu.svg"
+          alt="Menu"
+          width="24"
+          height="24"
+          loading="lazy"
+        />
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html" aria-current="page">Resources</a></li>
@@ -174,7 +189,7 @@
         </p>
 
         <p>
-          <a href="index.html" class="button secondary">← Back to Home</a>
+          <a href="/" class="button secondary">← Back to Home</a>
         </p>
       </section>
     </main>
@@ -214,6 +229,8 @@
     </footer>
 
     <script src="scripts/theme.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+
     <noscript>
       <style>
         #theme-toggle {
