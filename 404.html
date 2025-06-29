@@ -3,28 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page not found – Umer Khan" />
     <title>404 – Not Found</title>
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:title" content="404 – Not Found" />
+    <meta
+      property="og:description"
+      content="Page not found on Umer Khan’s site."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/404.html" />
+    <meta name="theme-color" content="#ffffff" />
     <style>
-      .not-found {
+      main.not-found {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
         text-align: center;
-        margin-top: 4rem;
-        padding: 2rem;
       }
 
       .terminal {
-        font-family: "Roboto Mono", monospace;
+        font-family: var(--font-mono);
         background: var(--bg-secondary);
         display: inline-block;
-        padding: 1rem;
+        padding: 1rem 1.2rem;
         border-radius: var(--radius);
         color: var(--text);
         border: 1px solid var(--border);
+        margin-top: 1.5rem;
       }
 
       .button.secondary {
@@ -37,6 +50,7 @@
         padding: 0.5rem 1rem;
         border-radius: var(--radius);
         transition: background 0.2s ease, color 0.2s ease;
+        font-family: var(--font-mono);
       }
 
       .button.secondary:hover {
@@ -47,47 +61,52 @@
   </head>
   <body>
     <nav class="top-nav">
+      <a href="index.html" class="logo">Umer Khan</a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li>
-          <a
-            href="https://github.com/umerkn"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
+          <button
+            id="theme-toggle"
+            aria-label="Toggle theme"
+            title="Toggle theme"
           >
+            🌙
+          </button>
         </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/umerkn"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-        </li>
-        <li><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
       </ul>
     </nav>
 
     <main class="not-found">
       <h1>404 – Not Found</h1>
+      <p class="tagline">Looks like this page doesn’t exist.</p>
       <div class="terminal">
         $ cd /page-not-found<br />
         bash: cd: /page-not-found: No such file or directory
       </div>
-      <br />
-      <a href="index.html" class="button secondary">← Go Home</a>
+      <div>
+        <a href="index.html" class="button secondary">← Go Home</a>
+      </div>
     </main>
 
     <footer>
-      <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
+      <address>
+        <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
+      </address>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
     <script src="scripts/theme.js"></script>
+    <noscript>
+      <style>
+        #theme-toggle {
+          display: none;
+        }
+      </style>
+    </noscript>
   </body>
 </html>

@@ -3,16 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
+    />
     <title>Umer Khan</title>
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:title" content="Umer Khan" />
+    <meta
+      property="og:description"
+      content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/index.html" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <nav class="top-nav">
+      <a href="index.html" class="logo">Umer Khan</a>
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -20,13 +35,19 @@
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li>
-          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <button
+            id="theme-toggle"
+            aria-label="Toggle theme"
+            title="Toggle theme"
+          >
+            🌙
+          </button>
         </li>
       </ul>
     </nav>
 
     <header class="hero compact">
-      <h1>Umer Khan</h1>
+      <h1>Hi, I’m Umer</h1>
       <p class="tagline">
         First-year AI student exploring code, Linux, and ideas.
       </p>
@@ -45,6 +66,20 @@
           bioinformatics and follow open-source projects closely. If you're
           working on something interesting, I'm probably curious about it.
         </p>
+      </section>
+
+      <section class="projects-overview">
+        <h2>Projects</h2>
+        <div class="card-group">
+          <article class="card">
+            <div class="card-content">
+              <p>
+                A growing list of things I’ve built with code and curiosity.
+              </p>
+              <a href="projects.html" class="button">View Projects →</a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="more-section">
@@ -72,11 +107,20 @@
     </main>
 
     <footer>
-      <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
+      <address>
+        <p><a href="mailto:umerkn404@gmail.com">umerkn404@gmail.com</a></p>
+      </address>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
     <script src="scripts/theme.js"></script>
+    <noscript>
+      <style>
+        #theme-toggle {
+          display: none;
+        }
+      </style>
+    </noscript>
   </body>
 </html>
