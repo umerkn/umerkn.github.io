@@ -1,22 +1,31 @@
+(() => {
+  try {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+      document.documentElement.classList.add("light");
+    } else if (saved === "dark") {
+      document.documentElement.classList.remove("light");
+    } else {
+      // Optional: fallback to system preference
+      const prefersLight = window.matchMedia(
+        "(prefers-color-scheme: light)"
+      ).matches;
+      if (prefersLight) {
+        document.documentElement.classList.add("light");
+      }
+    }
+  } catch {}
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const toggleBtn = document.getElementById("theme-toggle");
-
-  const saved = localStorage.getItem("theme");
-  const light =
-    saved === "light" ||
-    (!saved && window.matchMedia("(prefers-color-scheme: light)").matches);
-
-  if (light) {
-    root.classList.add("light");
-  } else {
-    root.classList.remove("light");
-  }
+  if (!toggleBtn) return;
 
   toggleBtn.addEventListener("click", () => {
     const isLight = root.classList.toggle("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
+    try {
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    } catch {}
   });
-
-  root.classList.add("ready");
 });

@@ -10,6 +10,8 @@
           ).matches;
           if (theme === "light" || (!theme && prefersLight)) {
             document.documentElement.classList.add("light");
+          } else {
+            document.documentElement.classList.remove("light");
           }
         } catch {}
       })();
@@ -21,15 +23,19 @@
       name="description"
       content="Helpful resources collected by Umer Khan – notes, tools, and learning links."
     />
+    <meta name="author" content="Umer Khan" />
+    <meta name="robots" content="index, follow" />
     <title>Resources – Umer Khan</title>
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <meta property="og:title" content="Resources – Umer Khan" />
     <meta
       property="og:description"
@@ -37,8 +43,18 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/resources.html" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0d0d"
+      media="(prefers-color-scheme: dark)"
+    />
   </head>
+
   <body>
     <nav class="top-nav">
       <a href="index.html" class="logo">Umer Khan</a>
@@ -49,6 +65,7 @@
         <li><a href="resources.html" aria-current="page">Resources</a></li>
         <li>
           <button
+            type="button"
             id="theme-toggle"
             aria-label="Toggle theme"
             title="Toggle theme"
@@ -57,18 +74,22 @@
               src="assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
             <img
               src="assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
           </button>
         </li>
       </ul>
     </nav>
 
-    <header class="hero compact">
+    <header class="hero compact fade-in">
       <h1>Learning Materials</h1>
       <p class="tagline">
         Helpful stuff for classmates, friends, and future me
@@ -76,13 +97,14 @@
     </header>
 
     <main>
-      <section class="learning-section">
+      <section class="learning-section fade-in">
         <p>
           Notes, links, and concepts I'm learning as I go. I’ll keep adding
           helpful tools and references over time.
         </p>
 
         <h2>Resources</h2>
+
         <div class="card-group">
           <div class="card">
             <div class="card-content">
@@ -120,7 +142,31 @@
               </a>
             </div>
           </div>
+
+          <!--
+          <div class="card">
+            <div class="card-content">
+              <h3>Resource Title</h3>
+              <p>Short description of the resource or link.</p>
+              <a
+                href="https://link-to-resource.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+              >
+                Visit →
+              </a>
+            </div>
+          </div>
+          -->
         </div>
+
+        <!-- 
+        <div class="pagination">
+          <a href="?page=1" class="button">1</a>
+          <a href="?page=2" class="button">2</a>
+        </div>
+        -->
 
         <p>
           Got something useful? Feel free to
@@ -133,33 +179,41 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       <div class="social-icons">
         <a href="mailto:umerkn404@gmail.com" aria-label="Email">
-          <img src="assets/icons/envelope-simple.svg" alt="Email" />
+          <img
+            src="assets/icons/envelope-simple.svg"
+            alt="Email"
+            loading="lazy"
+          />
         </a>
         <a
           href="https://github.com/umerkn"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/icons/github-logo.svg" alt="GitHub" />
+          <img src="assets/icons/github-logo.svg" alt="GitHub" loading="lazy" />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" />
+          <img
+            src="assets/icons/linkedin-logo.svg"
+            alt="LinkedIn"
+            loading="lazy"
+          />
         </a>
       </div>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
-    <script src="scripts/theme.js"></script>
+    <script src="scripts/theme.js" defer></script>
     <noscript>
       <style>
         #theme-toggle {

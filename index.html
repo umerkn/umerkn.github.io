@@ -10,6 +10,8 @@
           ).matches;
           if (theme === "light" || (!theme && prefersLight)) {
             document.documentElement.classList.add("light");
+          } else {
+            document.documentElement.classList.remove("light");
           }
         } catch {}
       })();
@@ -21,7 +23,10 @@
       name="description"
       content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
     />
+    <meta name="author" content="Umer Khan" />
+    <meta name="robots" content="index, follow" />
     <title>Umer Khan</title>
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,26 +35,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <meta property="og:title" content="Umer Khan" />
     <meta
       property="og:description"
       content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/index.html" />
+    <meta property="og:url" content="https://yourdomain.com/" />
     <meta name="theme-color" content="#ffffff" />
   </head>
 
   <body>
     <nav class="top-nav">
-      <a href="index.html" class="logo">Umer Khan</a>
+      <a href="/" class="logo">Umer Khan</a>
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li>
           <button
+            type="button"
             id="theme-toggle"
             aria-label="Toggle theme"
             title="Toggle theme"
@@ -58,18 +65,22 @@
               src="assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
             <img
               src="assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
           </button>
         </li>
       </ul>
     </nav>
 
-    <header class="hero compact">
+    <header class="hero compact fade-in">
       <h1>Hi, I’m Umer</h1>
       <p class="tagline">
         First-year AI student exploring code, Linux, and ideas.
@@ -77,7 +88,7 @@
     </header>
 
     <main>
-      <section class="about">
+      <section class="about fade-in">
         <h2>About Me</h2>
         <p>
           I'm Umer, a first-year AI undergrad who enjoys building things with
@@ -91,7 +102,7 @@
         </p>
       </section>
 
-      <section class="projects-overview">
+      <section class="projects-overview fade-in">
         <h2>Projects</h2>
         <div class="card-group">
           <article class="card">
@@ -105,7 +116,7 @@
         </div>
       </section>
 
-      <section class="more-section">
+      <section class="more-section fade-in">
         <h2>More from Me</h2>
         <div class="card-group">
           <article class="card">
@@ -129,10 +140,14 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       <div class="social-icons">
         <a href="mailto:umerkn404@gmail.com" aria-label="Email">
-          <img src="assets/icons/envelope-simple.svg" alt="Email" />
+          <img
+            src="assets/icons/envelope-simple.svg"
+            alt="Email"
+            loading="lazy"
+          />
         </a>
         <a
           href="https://github.com/umerkn"
@@ -140,7 +155,7 @@
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/icons/github-logo.svg" alt="GitHub" />
+          <img src="assets/icons/github-logo.svg" alt="GitHub" loading="lazy" />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
@@ -148,7 +163,11 @@
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" />
+          <img
+            src="assets/icons/linkedin-logo.svg"
+            alt="LinkedIn"
+            loading="lazy"
+          />
         </a>
       </div>
       <p>Made with ❤️</p>

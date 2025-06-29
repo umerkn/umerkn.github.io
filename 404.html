@@ -10,6 +10,8 @@
           ).matches;
           if (theme === "light" || (!theme && prefersLight)) {
             document.documentElement.classList.add("light");
+          } else {
+            document.documentElement.classList.remove("light");
           }
         } catch {}
       })();
@@ -18,15 +20,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Page not found – Umer Khan" />
+    <meta name="author" content="Umer Khan" />
+    <meta name="robots" content="noindex" />
     <title>404 – Not Found</title>
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <meta property="og:title" content="404 – Not Found" />
     <meta
       property="og:description"
@@ -34,18 +40,29 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/404.html" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0d0d"
+      media="(prefers-color-scheme: dark)"
+    />
   </head>
+
   <body>
     <nav class="top-nav">
-      <a href="index.html" class="logo">Umer Khan</a>
+      <a href="/" class="logo">Umer Khan</a>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li>
           <button
+            type="button"
             id="theme-toggle"
             aria-label="Toggle theme"
             title="Toggle theme"
@@ -54,18 +71,22 @@
               src="assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
             <img
               src="assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
+              loading="lazy"
+              aria-hidden="true"
             />
           </button>
         </li>
       </ul>
     </nav>
 
-    <main class="not-found">
+    <main class="not-found fade-in">
       <h1>404 – Not Found</h1>
       <p class="tagline">Looks like this page doesn’t exist.</p>
       <div class="terminal">
@@ -73,37 +94,46 @@
         bash: cd: /page-not-found: No such file or directory
       </div>
       <div>
-        <a href="index.html" class="button secondary">← Go Home</a>
+        <a href="/" class="button secondary">← Go Home</a>
       </div>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       <div class="social-icons">
         <a href="mailto:umerkn404@gmail.com" aria-label="Email">
-          <img src="assets/icons/envelope-simple.svg" alt="Email" />
+          <img
+            src="assets/icons/envelope-simple.svg"
+            alt="Email"
+            loading="lazy"
+          />
         </a>
         <a
           href="https://github.com/umerkn"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/icons/github-logo.svg" alt="GitHub" />
+          <img src="assets/icons/github-logo.svg" alt="GitHub" loading="lazy" />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" />
+          <img
+            src="assets/icons/linkedin-logo.svg"
+            alt="LinkedIn"
+            loading="lazy"
+          />
         </a>
       </div>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
-    <script src="scripts/theme.js"></script>
+    <script src="scripts/theme.js" defer></script>
+
     <noscript>
       <style>
         #theme-toggle {
