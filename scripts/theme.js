@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const toggleBtn = document.getElementById("theme-toggle");
+  const iconImg = toggleBtn.querySelector("img");
 
-  if (!toggleBtn) return;
+  if (!toggleBtn || !iconImg) return;
 
   const setIcon = (isLight) => {
-    toggleBtn.textContent = isLight ? "☀️" : "🌙";
+    iconImg.src = isLight ? "assets/icons/moon.svg" : "assets/icons/sun.svg";
+    iconImg.alt = isLight ? "Switch to dark theme" : "Switch to light theme";
   };
 
   const savedTheme = localStorage.getItem("theme");
