@@ -177,7 +177,6 @@ section {
   }
 }
 
-/* Hide Hamburger on Desktop */
 @media (min-width: 769px) {
   .mobile-menu-toggle {
     display: none !important;
@@ -354,7 +353,6 @@ main.not-found {
   padding: 4rem 1.5rem;
 }
 
-/* Project Image Fix */
 .project-img {
   width: 100%;
   height: auto;
