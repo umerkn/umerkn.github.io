@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn.addEventListener("click", () => {
     navLinks.classList.toggle("open");
     const isOpen = navLinks.classList.contains("open");
-    menuIcon.src = isOpen ? "assets/icons/x.svg" : "assets/icons/menu.svg";
+    menuIcon.src = isOpen ? "/assets/icons/x.svg" : "/assets/icons/menu.svg";
     menuIcon.alt = isOpen ? "Close menu" : "Open menu";
   });
 });
