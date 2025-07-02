@@ -360,3 +360,6 @@ main.not-found {
     flex-direction: column;
   }
 }
+.post-card + .post-card {
+  margin-top: 2rem;
+}
