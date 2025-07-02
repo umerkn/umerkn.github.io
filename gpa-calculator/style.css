@@ -31,6 +31,14 @@ body {
   line-height: 1.7;
   font-size: 16px;
 }
+.button,
+.gpa-summary,
+.gpa-table,
+.tagline,
+.terminal,
+h1 {
+  font-family: var(--font-mono);
+}
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -38,7 +46,6 @@ main {
 }
 .tagline,
 h1 {
-  font-family: var(--font-mono);
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
@@ -57,7 +64,6 @@ h1 {
 .gpa-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-mono);
   font-size: 0.9rem;
 }
 .gpa-table thead {
@@ -112,7 +118,6 @@ h1 {
 }
 .button,
 .terminal {
-  font-family: var(--font-mono);
   color: var(--text);
 }
 .delete-button {
@@ -187,6 +192,14 @@ h1 {
     align-items: center;
     border: none;
     padding: 0.5rem 0;
+    position: relative;
+  }
+  .gpa-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--muted);
+    margin-right: 1rem;
+    flex: 1;
   }
   .gpa-table td:last-child {
     justify-content: flex-end;

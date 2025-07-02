@@ -23,8 +23,9 @@ const courseList = [
   ];
 function createCourseRow(e = {}) {
   let t = document.createElement("tr"),
-    a = document.createElement("td"),
-    n = document.createElement("input");
+    a = document.createElement("td");
+  a.setAttribute("data-label", "Course");
+  let n = document.createElement("input");
   (n.type = "text"),
     (n.name = "name"),
     (n.placeholder = "Course Name"),
@@ -32,8 +33,9 @@ function createCourseRow(e = {}) {
     (n.className = "course-name"),
     (n.value = e.name || ""),
     a.appendChild(n);
-  let r = document.createElement("td"),
-    l = document.createElement("select");
+  let r = document.createElement("td");
+  r.setAttribute("data-label", "Credits");
+  let l = document.createElement("select");
   (l.name = "credit"),
     (l.required = !0),
     (l.className = "credit-input"),
@@ -48,8 +50,9 @@ function createCourseRow(e = {}) {
         )
         .join("")),
     r.appendChild(l);
-  let d = document.createElement("td"),
-    i = document.createElement("select");
+  let d = document.createElement("td");
+  d.setAttribute("data-label", "Grade");
+  let i = document.createElement("select");
   (i.name = "grade"),
     (i.required = !0),
     (i.className = "grade-select"),
@@ -59,22 +62,19 @@ function createCourseRow(e = {}) {
         .map((e) => `<option value="${e.gp}">${e.grade}</option>`)
         .join("")),
     d.appendChild(i);
-  let s = document.createElement("td"),
-    o = document.createElement("div");
+  let s = document.createElement("td");
+  s.setAttribute("data-label", "GP");
+  let o = document.createElement("div");
   (o.className = "inline-result"), s.appendChild(o);
   let c = document.createElement("td"),
-    m = document.createElement("button");
-  (m.type = "button"),
-    (m.className = "delete-button"),
-    (m.innerHTML = '<img src="/assets/icons/trash-simple.svg" alt="Delete" />'),
-    m.addEventListener("click", () => t.remove()),
-    c.appendChild(m),
-    i.addEventListener("change", () => {
-      updateInlineResult(l, i, o);
-    }),
-    l.addEventListener("change", () => {
-      updateInlineResult(l, i, o);
-    }),
+    u = document.createElement("button");
+  (u.type = "button"),
+    (u.className = "delete-button"),
+    (u.innerHTML = '<img src="/assets/icons/trash-simple.svg" alt="Delete" />'),
+    u.addEventListener("click", () => t.remove()),
+    c.appendChild(u),
+    l.addEventListener("change", () => updateInlineResult(l, i, o)),
+    i.addEventListener("change", () => updateInlineResult(l, i, o)),
     t.append(a, r, d, s, c),
     document.getElementById("courses").appendChild(t);
 }
@@ -100,7 +100,7 @@ document.getElementById("gpa-form").addEventListener("submit", function (e) {
   t.forEach((e) => {
     let t = parseFloat(e.querySelector('select[name="credit"]').value),
       r = parseFloat(e.querySelector('select[name="grade"]').value);
-    isNaN(t) || isNaN(r) || ((n += t), (a += t * r));
+    isNaN(t) || isNaN(r) || ((n += t), (a += r * t));
   });
   let r = n ? (a / n).toFixed(2) : "0.00",
     l = document.getElementById("result");
