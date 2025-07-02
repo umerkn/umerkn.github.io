@@ -1,31 +1,22 @@
 (() => {
   try {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light") {
-      document.documentElement.classList.add("light");
-    } else if (saved === "dark") {
-      document.documentElement.classList.remove("light");
-    } else {
-      // Optional: fallback to system preference
-      const prefersLight = window.matchMedia(
-        "(prefers-color-scheme: light)"
-      ).matches;
-      if (prefersLight) {
-        document.documentElement.classList.add("light");
-      }
+    let e = localStorage.getItem("theme");
+    if ("light" === e) document.documentElement.classList.add("light");
+    else if ("dark" === e) document.documentElement.classList.remove("light");
+    else {
+      let t = window.matchMedia("(prefers-color-scheme: light)").matches;
+      t && document.documentElement.classList.add("light");
     }
   } catch {}
-})();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
-  const toggleBtn = document.getElementById("theme-toggle");
-  if (!toggleBtn) return;
-
-  toggleBtn.addEventListener("click", () => {
-    const isLight = root.classList.toggle("light");
-    try {
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-    } catch {}
+})(),
+  document.addEventListener("DOMContentLoaded", () => {
+    let e = document.documentElement,
+      t = document.getElementById("theme-toggle");
+    t &&
+      t.addEventListener("click", () => {
+        let t = e.classList.toggle("light");
+        try {
+          localStorage.setItem("theme", t ? "light" : "dark");
+        } catch {}
+      });
   });
-});

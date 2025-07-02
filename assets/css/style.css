@@ -1,20 +1,39 @@
-/* Self-hosted Fonts: Inter v19 & Roboto Mono v30 */
+.top-nav .logo,
+.top-nav a,
+.top-nav button {
+  text-decoration: none;
+  font-family: var(--font-mono);
+}
+#theme-toggle img,
+footer .social-icons img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+#theme-toggle:hover img,
+.mobile-menu-toggle:hover img,
+footer .social-icons a:hover img {
+  transform: scale(1.1);
+  opacity: 0.75;
+}
+.hero,
+footer,
+main.not-found {
+  text-align: center;
+}
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url("/assets/fonts/inter-v19-latin-regular.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url("/assets/fonts/inter-v19-latin-600.woff2") format("woff2");
 }
-
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
@@ -22,8 +41,6 @@
   font-display: swap;
   src: url("/assets/fonts/roboto-mono-v30-latin-regular.woff2") format("woff2");
 }
-
-/* Theme Variables */
 :root {
   --bg: #0f0f0f;
   --text: #eaeaea;
@@ -35,7 +52,6 @@
   --font-sans: "Inter", sans-serif;
   --hover-bg: #181818;
 }
-
 .light {
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -44,8 +60,6 @@
   --border: #dddddd;
   --hover-bg: #efefef;
 }
-
-/* Base Styles */
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -54,24 +68,21 @@ body {
   line-height: 1.7;
   font-size: 16px;
 }
-
 a {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-family: var(--font-mono);
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s, color 0.2s;
 }
-
 p {
   font-family: var(--font-sans);
   margin-bottom: 1rem;
 }
-
+.tagline,
 h1,
 h2,
-h3,
-.tagline {
+h3 {
   font-family: var(--font-mono);
   font-weight: 600;
   margin-bottom: 0.8rem;
@@ -90,7 +101,6 @@ h3 {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -99,8 +109,6 @@ main {
 section {
   margin-bottom: 3.5rem;
 }
-
-/* Navigation */
 .top-nav {
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
@@ -111,10 +119,8 @@ section {
   position: relative;
 }
 .top-nav .logo {
-  font-family: var(--font-mono);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
-  text-decoration: none;
 }
 .top-nav ul {
   display: flex;
@@ -128,51 +134,49 @@ section {
 .top-nav button {
   font-size: 0.95rem;
   color: var(--text);
-  background: none;
+  background: 0 0;
   border: none;
   cursor: pointer;
-  font-family: var(--font-mono);
   padding: 0.2rem 0.4rem;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s;
 }
+.mobile-menu-toggle img,
+footer .social-icons img {
+  transition: filter 0.2s, opacity 0.2s, transform 0.2s;
+  filter: invert(1) brightness(1.2);
+}
+.card:hover,
 .top-nav a:hover,
 .top-nav button:hover {
   background: var(--hover-bg);
 }
 .top-nav a[aria-current="page"] {
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
-/* Hamburger Toggle (mobile only) */
 .mobile-menu-toggle {
   display: none;
-  background: none;
+  background: 0 0;
   border: none;
   cursor: pointer;
   padding: 0.3rem;
 }
+.card,
+.terminal {
+  background: var(--bg-secondary);
+}
 .mobile-menu-toggle img {
   width: 1.6rem;
   height: 1.6rem;
-  filter: invert(1) brightness(1.2);
-  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 .light .mobile-menu-toggle img {
   filter: none;
 }
-.mobile-menu-toggle:hover img {
-  opacity: 0.75;
-  transform: scale(1.1);
-}
-
-/* Mobile Menu Styles */
 @media (max-width: 768px) {
   .top-nav ul {
     display: none;
@@ -185,29 +189,32 @@ section {
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
     gap: 0.5rem;
-    animation: fadeIn 0.2s ease-in-out;
+    animation: 0.2s ease-in-out fadeIn;
     z-index: 10;
   }
-
   .top-nav ul.open {
     display: flex;
   }
-
   .top-nav ul li {
     text-align: right;
   }
-
   .mobile-menu-toggle {
     display: block;
   }
 }
-
+.button.secondary,
+.card a.button {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
 @media (min-width: 769px) {
   .mobile-menu-toggle {
     display: none !important;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -218,17 +225,16 @@ section {
     transform: translateY(0);
   }
 }
-
-/* Hero Section */
 .hero {
-  text-align: center;
   padding: 2.5rem 1rem 2rem;
+}
+.card-content,
+.terminal {
+  padding: 1rem 1.2rem;
 }
 .hero.compact {
   padding: 2rem 1rem;
 }
-
-/* Cards */
 .card-group {
   display: grid;
   grid-template-columns: 1fr;
@@ -241,64 +247,47 @@ section {
   }
 }
 .card {
-  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
-  transition: background 0.2s ease;
+  transition: background 0.2s;
 }
-.card:hover {
-  background: var(--hover-bg);
-}
-.card-content {
-  padding: 1rem 1.2rem;
+.button.secondary,
+.card a.button,
+.terminal,
+footer,
+footer a,
+footer p {
+  font-family: var(--font-mono);
 }
 .card a.button {
-  display: inline-block;
   margin-top: 0.5rem;
   padding: 0.4rem 0.9rem;
-  font-size: 0.9rem;
-  color: var(--text);
   border: 1px solid var(--text);
   border-radius: var(--radius);
-  text-decoration: none;
-  font-family: var(--font-mono);
-  transition: background 0.2s ease, color 0.2s ease;
 }
+.button.secondary:hover,
 .card a.button:hover {
   background: var(--text);
   color: var(--bg);
 }
-
-/* Terminal Box */
 .terminal {
-  font-family: var(--font-mono);
-  background: var(--bg-secondary);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem 1.2rem;
   text-align: left;
   margin: 1.5rem auto;
   max-width: 600px;
   white-space: pre-line;
   font-size: 0.95rem;
 }
-
-/* Theme Toggle */
 #theme-toggle img {
-  width: 1.4rem;
-  height: 1.4rem;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s, transform 0.2s;
 }
-#theme-toggle:hover img {
-  opacity: 0.75;
-  transform: scale(1.1);
-}
-#theme-toggle .sun-icon,
-#theme-toggle .moon-icon {
+#theme-toggle .moon-icon,
+#theme-toggle .sun-icon {
   display: none !important;
 }
 .light #theme-toggle .moon-icon {
@@ -309,11 +298,7 @@ html:not(.light) #theme-toggle .sun-icon {
   display: inline !important;
   filter: invert(1) brightness(1.2);
 }
-
-/* Footer */
 footer {
-  font-family: var(--font-mono);
-  text-align: center;
   padding: 2rem 1rem 3rem;
   font-size: 0.9rem;
   display: flex;
@@ -321,10 +306,9 @@ footer {
   gap: 0.6rem;
   align-items: center;
 }
-footer p,
-footer a {
+footer a,
+footer p {
   margin: 0;
-  font-family: var(--font-mono);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -337,59 +321,36 @@ footer .social-icons {
   justify-content: center;
   align-items: center;
 }
-footer .social-icons img {
-  width: 1.4rem;
-  height: 1.4rem;
-  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-  filter: invert(1) brightness(1.2);
+.card img,
+.project-img {
+  height: auto;
+  display: block;
 }
 footer .social-icons a:hover img {
-  opacity: 0.75;
   filter: invert(1) brightness(1.1);
-  transform: scale(1.1);
 }
-.light footer .social-icons img,
-.light footer .social-icons a:hover img {
+.light footer .social-icons a:hover img,
+.light footer .social-icons img {
   filter: none;
   opacity: 0.75;
 }
-
-/* Buttons */
 .button.secondary {
   margin-top: 2rem;
-  display: inline-block;
-  font-size: 0.9rem;
-  color: var(--text);
   border: 1px solid var(--text);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
-  font-family: var(--font-mono);
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
 }
-.button.secondary:hover {
-  background: var(--text);
-  color: var(--bg);
-}
-
-/* 404 Page */
 main.not-found {
-  text-align: center;
   padding: 4rem 1.5rem;
 }
-
 .project-img {
   width: 100%;
-  height: auto;
-  display: block;
   object-fit: cover;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
 }
 .card img {
   max-width: 100%;
-  height: auto;
-  display: block;
 }
 @media (max-width: 400px) {
   .card-group {
