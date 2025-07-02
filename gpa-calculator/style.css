@@ -108,17 +108,6 @@ h1 {
   max-width: 80px;
 }
 
-/* Hide default number field arrows */
-.gpa-table input[type="number"]::-webkit-inner-spin-button,
-.gpa-table input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.gpa-table input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .gpa-table input:focus,
 .gpa-table select:focus {
   outline: none;
@@ -131,7 +120,7 @@ h1 {
   font-size: 0.8rem;
   color: var(--muted);
   min-width: 100px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 /* Icon-only remove button */
