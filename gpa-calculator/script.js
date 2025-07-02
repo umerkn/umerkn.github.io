@@ -74,7 +74,7 @@ function createCourseRow(course = {}) {
   const removeBtn = document.createElement("button");
   removeBtn.type = "button";
   removeBtn.className = "delete-button";
-  removeBtn.innerHTML = `<img src="/assets/icons/x.svg" alt="Delete" />`;
+  removeBtn.innerHTML = `<img src="/assets/icons/trash-simple.svg" alt="Delete" />`;
   removeBtn.addEventListener("click", () => row.remove());
   removeCell.appendChild(removeBtn);
 

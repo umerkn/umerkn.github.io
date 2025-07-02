@@ -191,20 +191,46 @@ h1 {
 
 /* Mobile layout adjustments */
 @media (max-width: 600px) {
-  .gpa-table .course-name {
-    min-width: 180px;
+  .gpa-table thead {
+    display: none;
   }
 
-  .gpa-table .credit-input {
-    max-width: 40px;
+  .gpa-table tr {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
   }
 
-  .gpa-table .grade-select {
-    max-width: 70px;
+  .gpa-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0.5rem 0;
+  }
+
+  .gpa-table td:last-child {
+    justify-content: flex-end;
   }
 
   .inline-result {
-    min-width: auto;
     font-size: 0.75rem;
+    min-width: auto;
+  }
+
+  .gpa-table .course-name {
+    min-width: 150px;
+  }
+
+  .gpa-table .credit-input {
+    max-width: 50px;
+  }
+
+  .gpa-table .grade-select {
+    max-width: 80px;
   }
 }
