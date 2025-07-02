@@ -23,12 +23,29 @@
     <meta name="robots" content="noindex, nofollow" />
     <title>GPA Calculator – Umer Khan</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -40,13 +57,7 @@
         aria-label="Toggle menu"
         title="Toggle menu"
       >
-        <img
-          src="/assets/icons/menu.svg"
-          alt="Menu"
-          width="24"
-          height="24"
-          loading="lazy"
-        />
+        <img src="/assets/icons/menu.svg" alt="Menu" width="24" height="24" />
       </button>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
@@ -55,6 +66,7 @@
         <li><a href="/resources.html">Resources</a></li>
         <li>
           <button
+            type="button"
             id="theme-toggle"
             aria-label="Toggle theme"
             title="Toggle theme"
@@ -63,15 +75,17 @@
               src="/assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
             <img
               src="/assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
           </button>
         </li>
@@ -120,7 +134,8 @@
           <img
             src="/assets/icons/envelope-simple.svg"
             alt="Email"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
         <a
@@ -132,7 +147,8 @@
           <img
             src="/assets/icons/github-logo.svg"
             alt="GitHub"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
         <a
@@ -144,7 +160,8 @@
           <img
             src="/assets/icons/linkedin-logo.svg"
             alt="LinkedIn"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
       </div>
@@ -152,9 +169,9 @@
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/menu.js"></script>
-    <script src="script.js"></script>
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/menu.js" defer></script>
+    <script src="script.js" defer></script>
     <script
       data-goatcounter="https://umerkn.goatcounter.com/count"
       async

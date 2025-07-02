@@ -16,6 +16,7 @@
         } catch {}
       })();
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -24,15 +25,36 @@
     />
     <meta name="author" content="Umer Khan" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="dark light" />
+
     <title>Umer Khan</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <meta property="og:title" content="Umer Khan" />
     <meta
       property="og:description"
@@ -40,8 +62,8 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/" />
-    <meta name="theme-color" content="#ffffff" />
   </head>
+
   <body>
     <nav class="top-nav">
       <a href="/" class="logo">Umer Khan</a>
@@ -50,13 +72,7 @@
         aria-label="Toggle menu"
         title="Toggle menu"
       >
-        <img
-          src="assets/icons/menu.svg"
-          alt="Menu"
-          width="24"
-          height="24"
-          loading="lazy"
-        />
+        <img src="assets/icons/menu.svg" alt="Menu" width="24" height="24" />
       </button>
       <ul class="nav-links">
         <li><a href="/" aria-current="page">Home</a></li>
@@ -74,26 +90,30 @@
               src="assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
             <img
               src="assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
           </button>
         </li>
       </ul>
     </nav>
+
     <header class="hero compact fade-in">
       <h1>Hi, I’m Umer</h1>
       <p class="tagline">
         First-year AI student exploring code, Linux, and ideas.
       </p>
     </header>
+
     <main>
       <section class="about fade-in">
         <h2>About Me</h2>
@@ -108,6 +128,7 @@
           working on something interesting, I'm probably curious about it.
         </p>
       </section>
+
       <section class="projects-overview fade-in">
         <h2>Projects</h2>
         <div class="card-group">
@@ -121,6 +142,7 @@
           </article>
         </div>
       </section>
+
       <section class="more-section fade-in">
         <h2>More from Me</h2>
         <div class="card-group">
@@ -144,13 +166,15 @@
         </div>
       </section>
     </main>
+
     <footer class="fade-in">
       <div class="social-icons">
         <a href="mailto:hi@umerkn.me" aria-label="Email">
           <img
             src="assets/icons/envelope-simple.svg"
             alt="Email"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
         <a
@@ -159,7 +183,12 @@
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/icons/github-logo.svg" alt="GitHub" loading="lazy" />
+          <img
+            src="assets/icons/github-logo.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
@@ -170,20 +199,23 @@
           <img
             src="assets/icons/linkedin-logo.svg"
             alt="LinkedIn"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
       </div>
       <p>Made with ❤️</p>
       <p>&copy; 2025 Umer Khan</p>
     </footer>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/menu.js"></script>
+
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/menu.js" defer></script>
     <script
       data-goatcounter="https://umerkn.goatcounter.com/count"
       async
       src="//gc.zgo.at/count.js"
     ></script>
+
     <noscript>
       <style>
         #theme-toggle {

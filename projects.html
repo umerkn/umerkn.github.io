@@ -25,15 +25,34 @@
     />
     <meta name="author" content="Umer Khan" />
     <meta name="robots" content="index, follow" />
-    <title>Projects – Umer Khan</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="dark light" />
 
+    <title>Projects – Umer Khan</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <meta property="og:title" content="Projects – Umer Khan" />
@@ -43,16 +62,6 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/projects.html" />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#0d0d0d"
-      media="(prefers-color-scheme: dark)"
-    />
   </head>
 
   <body>
@@ -64,13 +73,7 @@
         aria-label="Toggle menu"
         title="Toggle menu"
       >
-        <img
-          src="assets/icons/menu.svg"
-          alt="Menu"
-          width="24"
-          height="24"
-          loading="lazy"
-        />
+        <img src="assets/icons/menu.svg" alt="Menu" width="24" height="24" />
       </button>
 
       <ul class="nav-links">
@@ -89,15 +92,17 @@
               src="assets/icons/sun.svg"
               alt="Light mode"
               class="icon sun-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
             <img
               src="assets/icons/moon.svg"
               alt="Dark mode"
               class="icon moon-icon"
-              loading="lazy"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
           </button>
         </li>
@@ -171,7 +176,8 @@
           <img
             src="assets/icons/envelope-simple.svg"
             alt="Email"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
         <a
@@ -180,7 +186,12 @@
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/icons/github-logo.svg" alt="GitHub" loading="lazy" />
+          <img
+            src="assets/icons/github-logo.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
         </a>
         <a
           href="https://linkedin.com/in/umerkn"
@@ -191,7 +202,8 @@
           <img
             src="assets/icons/linkedin-logo.svg"
             alt="LinkedIn"
-            loading="lazy"
+            width="24"
+            height="24"
           />
         </a>
       </div>
@@ -199,8 +211,8 @@
       <p>&copy; 2025 Umer Khan</p>
     </footer>
 
-    <script src="assets/js/theme.js" defer></script>
-    <script src="assets/js/menu.js" defer></script>
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/menu.js" defer></script>
     <script
       data-goatcounter="https://umerkn.goatcounter.com/count"
       async
