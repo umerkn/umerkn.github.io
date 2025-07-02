@@ -1,230 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script>
-      (function () {
-        try {
-          const theme = localStorage.getItem("theme");
-          const prefersLight = window.matchMedia(
-            "(prefers-color-scheme: light)"
-          ).matches;
-          if (theme === "light" || (!theme && prefersLight)) {
-            document.documentElement.classList.add("light");
-          } else {
-            document.documentElement.classList.remove("light");
-          }
-        } catch {}
-      })();
-    </script>
+---
+layout: default
+title: Blog
+description: Notes, ideas, and things I’m figuring out.
+permalink: /blog/
+---
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Blog by Umer Khan – notes, experiments, and reflections."
-    />
-    <meta name="author" content="Umer Khan" />
-    <meta name="robots" content="index, follow" />
+<header class="hero compact fade-in">
+  <h1>Blog</h1>
+  <p class="tagline">Notes, ideas, and things I’m figuring out.</p>
+</header>
 
-    <link rel="canonical" href="https://umerkn.me/blog/" />
+<main>
+  <section class="fade-in">
+    <ul class="blog-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br />
+        <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-    <title>Blog – Umer Khan</title>
-
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-
-    <meta property="og:title" content="Blog – Umer Khan" />
-    <meta
-      property="og:description"
-      content="Notes, ideas, and things I’m figuring out."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/blog.html" />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#0d0d0d"
-      media="(prefers-color-scheme: dark)"
-    />
-  </head>
-
-  <body>
-    <nav class="top-nav">
-      <a href="/" class="logo">Umer Khan</a>
-
-      <button
-        class="mobile-menu-toggle"
-        aria-label="Toggle menu"
-        title="Toggle menu"
-      >
-        <img src="/assets/icons/menu.svg" alt="Menu" width="24" height="24" />
-      </button>
-
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/blog/" aria-current="page">Blog</a></li>
-        <li><a href="/resources.html">Resources</a></li>
-        <li>
-          <button
-            type="button"
-            id="theme-toggle"
-            aria-label="Toggle theme"
-            title="Toggle theme"
-          >
-            <img
-              src="/assets/icons/sun.svg"
-              alt="Light mode"
-              class="icon sun-icon"
-              aria-hidden="true"
-              width="24"
-              height="24"
-            />
-            <img
-              src="/assets/icons/moon.svg"
-              alt="Dark mode"
-              class="icon moon-icon"
-              aria-hidden="true"
-              width="24"
-              height="24"
-            />
-          </button>
-        </li>
-      </ul>
-    </nav>
-
-    <header class="hero compact fade-in">
-      <h1>Blog</h1>
-      <p class="tagline">Notes, ideas, and things I’m figuring out</p>
-    </header>
-
-    <main>
-      <section class="blog-posts fade-in">
-        <p>
-          Welcome to my blog. I write about things I'm learning, curious about,
-          or just feel like sharing.
-        </p>
-        <article class="post-card">
-          <h2>
-            <a href="/blog/relative-grading-policy.html"
-              >Relative Grading Explained: What It Really Takes to Get an A+</a
-            >
-          </h2>
-          <p class="post-meta">July 2, 2025 – Education</p>
-          <p class="post-excerpt">
-            A friendly breakdown of UET Lahore’s relative grading system and
-            tips on how to get an A+.
-          </p>
-          <a href="/blog/relative-grading-policy.html" class="button"
-            >Read More →</a
-          >
-        </article>
-
-        <!--
-        <article class="post-card">
-          <h2><a href="posts/post-slug.html">Post Title</a></h2>
-          <p class="post-meta">June 29, 2025 – #tag</p>
-          <p class="post-excerpt">
-            Short summary or intro goes here.
-          </p>
-          <a href="posts/post-slug.html" class="button">Read More →</a>
-        </article>
-        -->
-
-        <!-- <div class="pagination">
-          <a href="?page=1" class="button">1</a>
-          <a href="?page=2" class="button">2</a>
-        </div> -->
-
-        <p>
-          <a href="/" class="button secondary">← Back to Home</a>
-        </p>
-      </section>
-    </main>
-
-    <footer class="fade-in">
-      <div class="social-icons">
-        <a href="mailto:hi@umerkn.me" aria-label="Email">
-          <img
-            src="/assets/icons/envelope-simple.svg"
-            alt="Email"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-        <a
-          href="https://github.com/umerkn"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <img
-            src="/assets/icons/github-logo.svg"
-            alt="GitHub"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-        <a
-          href="https://linkedin.com/in/umerkn"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <img
-            src="/assets/icons/linkedin-logo.svg"
-            alt="LinkedIn"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <p>Made with ❤️</p>
-      <p>&copy; 2025 Umer Khan</p>
-    </footer>
-
-    <script src="/assets/js/theme.js" defer></script>
-    <script src="/assets/js/menu.js" defer></script>
-    <script
-      data-goatcounter="https://umerkn.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
-
-    <noscript>
-      <style>
-        #theme-toggle {
-          display: none;
-        }
-      </style>
-    </noscript>
-  </body>
-</html>
+  <p class="back-home">
+    <a href="/" class="button secondary">← Back to Home</a>
+  </p>
+</main>

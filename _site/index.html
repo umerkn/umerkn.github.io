@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme");
+          const prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)"
+          ).matches;
+          if (theme === "light" || (!theme && prefersLight)) {
+            document.documentElement.classList.add("light");
+          } else {
+            document.documentElement.classList.remove("light");
+          }
+        } catch {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
+    />
+    <meta name="author" content="Umer Khan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="http://localhost:4000/" />
+    <title>Umer Khan</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <meta property="og:title" content="Umer Khan" />
+    <meta
+      property="og:description"
+      content="Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4000/" />
+  </head>
+
+  <body>
+    <nav class="top-nav">
+  <a href="/" class="logo">Umer Khan</a>
+  <button
+    class="mobile-menu-toggle"
+    aria-label="Toggle menu"
+    title="Toggle menu"
+  >
+    <img src="/assets/icons/menu.svg" alt="Menu" width="24" height="24" />
+  </button>
+  <ul class="nav-links">
+    <li>
+      <a href="/" aria-current="page">Home</a>
+    </li>
+    <li>
+      <a href="/projects.html" >Projects</a>
+    </li>
+    <li>
+      <a href="/blog/" >Blog</a>
+    </li>
+    <li>
+      <a href="/resources.html" >Resources</a>
+    </li>
+    <li>
+      <button
+        type="button"
+        id="theme-toggle"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+      >
+        <img
+          src="/assets/icons/sun.svg"
+          alt="Light mode"
+          class="icon sun-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          src="/assets/icons/moon.svg"
+          alt="Dark mode"
+          class="icon moon-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+      </button>
+    </li>
+  </ul>
+</nav>
+ <header class="hero compact fade-in">
+  <h1>Hi, I’m Umer</h1>
+  <p class="tagline">First-year AI student exploring code, Linux, and ideas.</p>
+</header>
+
+<main>
+  <section class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm Umer, a first-year AI undergrad who enjoys building things with C++,
+      C, and HTML/CSS. I spend a lot of time in Linux, learning by doing,
+      breaking stuff (on purpose), and figuring out how to fix it.
+    </p>
+    <p>
+      I care about tech that's useful and accessible. I'm interested in
+      bioinformatics and follow open-source projects closely. If you're working
+      on something interesting, I'm probably curious about it.
+    </p>
+  </section>
+
+  <section class="projects-overview fade-in">
+    <h2>Projects</h2>
+    <div class="card-group">
+      <article class="card">
+        <div class="card-content">
+          <p>A growing list of things I’ve built with code and curiosity.</p>
+          <a href="projects.html" class="button">View Projects →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="more-section fade-in">
+    <h2>More from Me</h2>
+    <div class="card-group">
+      <article class="card">
+        <div class="card-content">
+          <p>I’ll be sharing notes, logs, and thoughts on tech and learning.</p>
+          <a href="/blog/" class="button">Visit the Blog →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content">
+          <p>
+            Planning to collect notes and helpful material for classmates and
+            fellow learners.
+          </p>
+          <a href="resources.html" class="button">Check Resources →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+ <footer class="fade-in">
+  <div class="social-icons">
+    <a href="mailto:hi@umerkn.me" aria-label="Email">
+      <img
+        src="/assets/icons/envelope-simple.svg"
+        alt="Email"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://github.com/umerkn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >
+      <img
+        src="/assets/icons/github-logo.svg"
+        alt="GitHub"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://linkedin.com/in/umerkn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <img
+        src="/assets/icons/linkedin-logo.svg"
+        alt="LinkedIn"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+  </div>
+  <p>Made with ❤️</p>
+  <p>&copy; 2025 Umer Khan</p>
+</footer>
+
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/menu.js" defer></script>
+    <script
+      data-goatcounter="https://umerkn.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+    <noscript>
+      <style>
+        #theme-toggle {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>

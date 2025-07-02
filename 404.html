@@ -1,180 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script>
-      (function () {
-        try {
-          const theme = localStorage.getItem("theme");
-          const prefersLight = window.matchMedia(
-            "(prefers-color-scheme: light)"
-          ).matches;
-          if (theme === "light" || (!theme && prefersLight)) {
-            document.documentElement.classList.add("light");
-          } else {
-            document.documentElement.classList.remove("light");
-          }
-        } catch {}
-      })();
-    </script>
+---
+layout: default
+title: 404 – Not Found
+description: Page not found on Umer Khan’s site.
+permalink: /404.html
+robots: noindex
+---
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Page not found – Umer Khan" />
-    <meta name="author" content="Umer Khan" />
-    <meta name="robots" content="noindex" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="color-scheme" content="dark light" />
-
-    <link rel="canonical" href="https://umerkn.me/404.html" />
-
-    <title>404 – Not Found</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <meta property="og:title" content="404 – Not Found" />
-    <meta
-      property="og:description"
-      content="Page not found on Umer Khan’s site."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://umerkn.me/404.html" />
-  </head>
-
-  <body>
-    <nav class="top-nav">
-      <a href="/" class="logo">Umer Khan</a>
-      <button
-        class="mobile-menu-toggle"
-        aria-label="Toggle menu"
-        title="Toggle menu"
-      >
-        <img src="assets/icons/menu.svg" alt="Menu" width="24" height="24" />
-      </button>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li>
-          <button
-            type="button"
-            id="theme-toggle"
-            aria-label="Toggle theme"
-            title="Toggle theme"
-          >
-            <img
-              src="assets/icons/sun.svg"
-              alt="Light mode"
-              class="icon sun-icon"
-              aria-hidden="true"
-              width="24"
-              height="24"
-            />
-            <img
-              src="assets/icons/moon.svg"
-              alt="Dark mode"
-              class="icon moon-icon"
-              aria-hidden="true"
-              width="24"
-              height="24"
-            />
-          </button>
-        </li>
-      </ul>
-    </nav>
-
-    <main class="not-found fade-in">
-      <h1>404 – Not Found</h1>
-      <p class="tagline">Looks like this page doesn’t exist.</p>
-      <div class="terminal">
-        $ cd /page-not-found<br />
-        bash: cd: /page-not-found: No such file or directory
-      </div>
-      <div>
-        <a href="/" class="button secondary">← Go Home</a>
-      </div>
-    </main>
-
-    <footer class="fade-in">
-      <div class="social-icons">
-        <a href="mailto:hi@umerkn.me" aria-label="Email">
-          <img
-            src="assets/icons/envelope-simple.svg"
-            alt="Email"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-        <a
-          href="https://github.com/umerkn"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <img
-            src="assets/icons/github-logo.svg"
-            alt="GitHub"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-        <a
-          href="https://linkedin.com/in/umerkn"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <img
-            src="assets/icons/linkedin-logo.svg"
-            alt="LinkedIn"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <p>Made with ❤️</p>
-      <p>&copy; 2025 Umer Khan</p>
-    </footer>
-
-    <script src="/assets/js/theme.js" defer></script>
-    <script src="/assets/js/menu.js" defer></script>
-    <script
-      data-goatcounter="https://umerkn.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
-
-    <noscript>
-      <style>
-        #theme-toggle {
-          display: none;
-        }
-      </style>
-    </noscript>
-  </body>
-</html>
+<main class="not-found fade-in">
+  <h1>404 – Not Found</h1>
+  <p class="tagline">Looks like this page doesn’t exist.</p>
+  <div class="terminal">
+    $ cd /page-not-found<br />
+    bash: cd: /page-not-found: No such file or directory
+  </div>
+  <div>
+    <a href="/" class="button secondary">← Go Home</a>
+  </div>
+</main>

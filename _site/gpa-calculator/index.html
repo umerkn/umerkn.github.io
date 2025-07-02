@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme");
+          const prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)"
+          ).matches;
+          if (theme === "light" || (!theme && prefersLight)) {
+            document.documentElement.classList.add("light");
+          } else {
+            document.documentElement.classList.remove("light");
+          }
+        } catch {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GPA Calculator by Umer Khan"
+    />
+    <meta name="author" content="Umer Khan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="http://localhost:4000/gpa-calculator/" />
+    <title>GPA Calculator</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter-v19-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <meta property="og:title" content="GPA Calculator" />
+    <meta
+      property="og:description"
+      content="GPA Calculator by Umer Khan"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4000/gpa-calculator/" />
+  </head>
+
+  <body>
+    <nav class="top-nav">
+  <a href="/" class="logo">Umer Khan</a>
+  <button
+    class="mobile-menu-toggle"
+    aria-label="Toggle menu"
+    title="Toggle menu"
+  >
+    <img src="/assets/icons/menu.svg" alt="Menu" width="24" height="24" />
+  </button>
+  <ul class="nav-links">
+    <li>
+      <a href="/" >Home</a>
+    </li>
+    <li>
+      <a href="/projects.html" >Projects</a>
+    </li>
+    <li>
+      <a href="/blog/" >Blog</a>
+    </li>
+    <li>
+      <a href="/resources.html" >Resources</a>
+    </li>
+    <li>
+      <button
+        type="button"
+        id="theme-toggle"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+      >
+        <img
+          src="/assets/icons/sun.svg"
+          alt="Light mode"
+          class="icon sun-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          src="/assets/icons/moon.svg"
+          alt="Dark mode"
+          class="icon moon-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+      </button>
+    </li>
+  </ul>
+</nav>
+ <main>
+  <section class="fade-in">
+    <h1 id="gpa-heading">GPA Calculator</h1>
+    <p class="tagline">Add your courses, grades, and calculate your GPA.</p>
+    <p>
+      Learn more about how relative grading works and what it takes to get an A+
+      in my
+      <a href="/blog/relative-grading-policy.html">detailed blog post</a>.
+    </p>
+
+    <form id="gpa-form" aria-labelledby="gpa-heading">
+      <div class="table-wrapper">
+        <table class="gpa-table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Credits</th>
+              <th>Grade</th>
+              <th>Grade Points</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="courses"></tbody>
+        </table>
+      </div>
+
+      <div class="gpa-actions">
+        <button type="button" class="button" onclick="addCourse()">
+          Add Course
+        </button>
+        <button type="submit" class="button">Calculate GPA</button>
+        <button type="button" class="button" onclick="clearCourses()">
+          Clear All
+        </button>
+      </div>
+
+      <div
+        id="result"
+        class="terminal fade-in"
+        style="display: none"
+        aria-live="polite"
+      ></div>
+    </form>
+  </section>
+</main>
+
+<link rel="stylesheet" href="/gpa-calculator/style.css" />
+<script src="/gpa-calculator/script.js" defer></script>
+ <footer class="fade-in">
+  <div class="social-icons">
+    <a href="mailto:hi@umerkn.me" aria-label="Email">
+      <img
+        src="/assets/icons/envelope-simple.svg"
+        alt="Email"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://github.com/umerkn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >
+      <img
+        src="/assets/icons/github-logo.svg"
+        alt="GitHub"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://linkedin.com/in/umerkn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <img
+        src="/assets/icons/linkedin-logo.svg"
+        alt="LinkedIn"
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    </a>
+  </div>
+  <p>Made with ❤️</p>
+  <p>&copy; 2025 Umer Khan</p>
+</footer>
+
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/menu.js" defer></script>
+    <script
+      data-goatcounter="https://umerkn.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+    <noscript>
+      <style>
+        #theme-toggle {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>

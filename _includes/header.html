@@ -1,0 +1,49 @@
+<nav class="top-nav">
+  <a href="/" class="logo">Umer Khan</a>
+  <button
+    class="mobile-menu-toggle"
+    aria-label="Toggle menu"
+    title="Toggle menu"
+  >
+    <img src="/assets/icons/menu.svg" alt="Menu" width="24" height="24" />
+  </button>
+  <ul class="nav-links">
+    <li>
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+    </li>
+    <li>
+      <a href="/projects.html" {% if page.url == "/projects.html" %}aria-current="page"{% endif %}>Projects</a>
+    </li>
+    <li>
+      <a href="/blog/" {% if page.url == "/blog/" or page.url contains "/blog/" %}aria-current="page"{% endif %}>Blog</a>
+    </li>
+    <li>
+      <a href="/resources.html" {% if page.url == "/resources.html" %}aria-current="page"{% endif %}>Resources</a>
+    </li>
+    <li>
+      <button
+        type="button"
+        id="theme-toggle"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+      >
+        <img
+          src="/assets/icons/sun.svg"
+          alt="Light mode"
+          class="icon sun-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          src="/assets/icons/moon.svg"
+          alt="Dark mode"
+          class="icon moon-icon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+      </button>
+    </li>
+  </ul>
+</nav>
