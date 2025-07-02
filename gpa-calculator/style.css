@@ -1,8 +1,3 @@
-.button,
-.delete-button {
-  background: 0 0;
-  cursor: pointer;
-}
 :root {
   --bg: #0f0f0f;
   --text: #eaeaea;
@@ -14,6 +9,7 @@
   --font-sans: "Inter", sans-serif;
   --hover-bg: #181818;
 }
+
 .light {
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -22,6 +18,7 @@
   --border: #dddddd;
   --hover-bg: #efefef;
 }
+
 body {
   font-family: var(--font-sans);
   background: var(--bg);
@@ -31,56 +28,60 @@ body {
   line-height: 1.7;
   font-size: 16px;
 }
-.button,
-.gpa-summary,
-.gpa-table,
-.tagline,
-.terminal,
-h1 {
-  font-family: var(--font-mono);
-}
+
 main {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
-.tagline,
-h1 {
+
+h1,
+.tagline {
+  font-family: var(--font-mono);
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
+
 h1 {
   font-size: 2.2rem;
 }
+
 .tagline {
   font-size: 1.1rem;
   color: var(--muted);
 }
+
 .table-wrapper {
   overflow-x: auto;
   margin-top: 2rem;
 }
-.gpa-summary,
-.gpa-table {
+
+.gpa-table,
+.gpa-summary {
   width: 100%;
   border-collapse: collapse;
+  font-family: var(--font-mono);
   font-size: 0.9rem;
 }
+
 .gpa-table thead {
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
 }
-.gpa-summary td,
-.gpa-summary th,
+
+.gpa-table th,
 .gpa-table td,
-.gpa-table th {
+.gpa-summary th,
+.gpa-summary td {
   padding: 0.6rem 0.8rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
+
 .gpa-table td:last-child {
   text-align: center;
 }
+
 .gpa-table input,
 .gpa-table select {
   font-family: var(--font-mono);
@@ -94,32 +95,66 @@ h1 {
   width: 100%;
   box-sizing: border-box;
 }
-.gpa-table .course-name {
-  min-width: 300px;
-  width: 100%;
-}
-.gpa-table .credit-input {
-  max-width: 45px;
-}
-.gpa-table .grade-select {
-  max-width: 80px;
-}
+
 .gpa-table input:focus,
 .gpa-table select:focus {
   outline: 0;
   border-color: var(--text);
   background: var(--hover-bg);
 }
+
+.gpa-table .course-name {
+  min-width: 300px;
+  width: 100%;
+}
+
+.gpa-table .credit-input {
+  max-width: 45px;
+}
+
+.gpa-table .grade-select {
+  max-width: 80px;
+}
+
 .inline-result {
   font-size: 0.8rem;
   color: var(--muted);
   min-width: 100px;
   white-space: nowrap;
 }
+
+.gpa-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .button,
 .terminal {
+  font-family: var(--font-mono);
   color: var(--text);
 }
+
+.button,
+.delete-button {
+  background: none;
+  cursor: pointer;
+}
+
+.button {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
 .delete-button {
   border: none;
   padding: 0;
@@ -129,54 +164,46 @@ h1 {
   justify-content: center;
   transition: opacity 0.2s;
 }
+
 .delete-button img {
   width: 16px;
   height: 16px;
   opacity: 0.6;
   filter: invert(100%);
 }
+
 .light .delete-button img {
   filter: invert(0%);
 }
+
 .delete-button:hover img {
   opacity: 1;
 }
-.gpa-actions {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.button {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--text);
-  border-radius: var(--radius);
-  transition: background 0.2s, color 0.2s;
-}
-.gpa-summary thead,
-.terminal {
-  background: var(--bg-secondary);
-}
-.button:hover {
-  background: var(--text);
-  color: var(--bg);
-}
+
 .terminal {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.2rem;
   font-size: 0.95rem;
   margin-top: 2rem;
+  background: var(--bg-secondary);
   overflow-x: auto;
 }
+
+.gpa-summary thead {
+  background: var(--bg-secondary);
+}
+
 .gpa-summary td {
   font-weight: 500;
 }
+
+/* Mobile Layout */
 @media (max-width: 600px) {
   .gpa-table thead {
     display: none;
   }
+
   .gpa-table tr {
     display: flex;
     flex-direction: column;
@@ -186,6 +213,7 @@ h1 {
     margin-bottom: 1rem;
     border: 1px solid var(--border);
   }
+
   .gpa-table td {
     display: flex;
     justify-content: space-between;
@@ -194,6 +222,7 @@ h1 {
     padding: 0.5rem 0;
     position: relative;
   }
+
   .gpa-table td::before {
     content: attr(data-label);
     font-weight: 600;
@@ -201,22 +230,28 @@ h1 {
     margin-right: 1rem;
     flex: 1;
   }
+
   .gpa-table td:last-child {
     justify-content: flex-end;
   }
+
   .inline-result {
     font-size: 0.75rem;
     min-width: auto;
   }
+
   .gpa-table .course-name {
     min-width: 150px;
   }
+
   .gpa-table .credit-input {
     max-width: 50px;
   }
+
   .gpa-table .grade-select {
     max-width: 80px;
   }
+
   .gpa-summary td,
   .gpa-summary th {
     font-size: 0.85rem;
