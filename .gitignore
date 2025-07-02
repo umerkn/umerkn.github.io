@@ -1,0 +1,14 @@
+_site/
+.jekyll-cache/
+.bundle/
+vendor/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+.vscode/
+.idea/
+*.iml
+.env
