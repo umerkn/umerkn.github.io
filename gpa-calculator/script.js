@@ -118,10 +118,26 @@ document.getElementById("gpa-form").addEventListener("submit", function (e) {
   });
 
   const gpa = totalCredits ? (totalPoints / totalCredits).toFixed(2) : "0.00";
+
   const result = document.getElementById("result");
-  result.textContent = `Total Points: ${totalPoints.toFixed(
-    2
-  )}\nTotal Credits: ${totalCredits.toFixed(2)}\nGPA: ${gpa}`;
+  result.innerHTML = `
+    <table class="gpa-summary">
+      <thead>
+        <tr>
+          <th>Total Points</th>
+          <th>Total Credits</th>
+          <th>GPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${totalPoints.toFixed(2)}</td>
+          <td>${totalCredits.toFixed(2)}</td>
+          <td>${gpa}</td>
+        </tr>
+      </tbody>
+    </table>
+  `;
   result.style.display = "block";
 });
 

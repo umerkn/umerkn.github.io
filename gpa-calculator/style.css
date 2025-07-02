@@ -79,7 +79,6 @@ h1 {
   text-align: center;
 }
 
-/* Input styling */
 .gpa-table input,
 .gpa-table select {
   font-family: var(--font-mono);
@@ -94,7 +93,6 @@ h1 {
   box-sizing: border-box;
 }
 
-/* Column-specific widths */
 .gpa-table .course-name {
   min-width: 300px;
   width: 100%;
@@ -115,7 +113,6 @@ h1 {
   background: var(--hover-bg);
 }
 
-/* Inline calculation result */
 .inline-result {
   font-size: 0.8rem;
   color: var(--muted);
@@ -123,7 +120,6 @@ h1 {
   white-space: nowrap;
 }
 
-/* Icon-only remove button */
 .delete-button {
   background: none;
   border: none;
@@ -151,7 +147,6 @@ h1 {
   opacity: 1;
 }
 
-/* Action buttons (Add, Calculate) */
 .gpa-actions {
   margin-top: 1.5rem;
   display: flex;
@@ -176,7 +171,6 @@ h1 {
   color: var(--bg);
 }
 
-/* GPA display output */
 .terminal {
   font-family: var(--font-mono);
   background: var(--bg-secondary);
@@ -184,12 +178,33 @@ h1 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.2rem;
-  white-space: pre-line;
   font-size: 0.95rem;
   margin-top: 2rem;
+  overflow-x: auto;
 }
 
-/* Mobile layout adjustments */
+.gpa-summary {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.gpa-summary th,
+.gpa-summary td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.gpa-summary thead {
+  background: var(--bg-secondary);
+}
+
+.gpa-summary td {
+  font-weight: 500;
+}
+
 @media (max-width: 600px) {
   .gpa-table thead {
     display: none;
@@ -232,5 +247,10 @@ h1 {
 
   .gpa-table .grade-select {
     max-width: 80px;
+  }
+
+  .gpa-summary th,
+  .gpa-summary td {
+    font-size: 0.85rem;
   }
 }
