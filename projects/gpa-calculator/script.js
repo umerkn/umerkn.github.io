@@ -19,7 +19,8 @@ const gradeOptions = [
   { grade: "C+", gp: 2.3 },
   { grade: "C", gp: 2 },
   { grade: "C-", gp: 1.7 },
-  { grade: "D", gp: 1.3 },
+  { grade: "D+", gp: 1.3 },
+  { grade: "D", gp: 1 },
   { grade: "F", gp: 0 },
 ];
 
