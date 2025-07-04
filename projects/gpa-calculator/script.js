@@ -1,12 +1,12 @@
 const courseList = [
-  { name: "AI-101 Applications of ICT", credit: 2 },
-  { name: "AI-101L Applications of ICT Lab", credit: 1 },
-  { name: "AI-121 Discrete Mathematics", credit: 3 },
-  { name: "AI-133 Programming Fundamentals", credit: 3 },
-  { name: "AI-133L Programming Fundamentals Lab", credit: 1 },
-  { name: "HU-102 Functional English", credit: 3 },
-  { name: "IS-102 Islamic Studies", credit: 2 },
-  { name: "MA-113 Calculus and Analytic Geometry", credit: 3 },
+  { name: "AICT", credit: 2 },
+  { name: "AICT Lab", credit: 1 },
+  { name: "PF", credit: 3 },
+  { name: "PF Lab", credit: 1 },
+  { name: "Discrete Math", credit: 3 },
+  { name: "Calculus", credit: 3 },
+  { name: "English", credit: 3 },
+  { name: "Islamiat", credit: 2 },
 ];
 
 const gradeOptions = [
@@ -19,7 +19,7 @@ const gradeOptions = [
   { grade: "C+", gp: 2.3 },
   { grade: "C", gp: 2 },
   { grade: "C-", gp: 1.7 },
-  { grade: "D", gp: 1 },
+  { grade: "D", gp: 1.3 },
   { grade: "F", gp: 0 },
 ];
 
@@ -53,7 +53,7 @@ function createCourseRow(data = {}) {
   selectCredit.className = "credit-input";
   selectCredit.innerHTML =
     '<option value="">--</option>' +
-    [1, 1.5, 2, 2.5, 3]
+    [1, 1.5, 2, 2.5, 3, 3.5, 4]
       .map(
         (val) =>
           `<option value="${val}" ${
