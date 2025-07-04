@@ -103,26 +103,6 @@ h1 {
   background: var(--hover-bg);
 }
 
-.gpa-table .course-name {
-  min-width: 300px;
-  width: 100%;
-}
-
-.gpa-table .credit-input {
-  max-width: 45px;
-}
-
-.gpa-table .grade-select {
-  max-width: 80px;
-}
-
-.inline-result {
-  font-size: 0.8rem;
-  color: var(--muted);
-  min-width: 100px;
-  white-space: nowrap;
-}
-
 .gpa-actions {
   margin-top: 1.5rem;
   display: flex;
@@ -130,19 +110,11 @@ h1 {
   flex-wrap: wrap;
 }
 
-.button,
-.terminal {
+.button {
   font-family: var(--font-mono);
   color: var(--text);
-}
-
-.button,
-.delete-button {
   background: none;
   cursor: pointer;
-}
-
-.button {
   font-size: 0.9rem;
   padding: 0.4rem 0.9rem;
   border: 1px solid var(--text);
@@ -159,25 +131,34 @@ h1 {
   border: none;
   padding: 0;
   margin: 0;
+  background: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .delete-button img {
   width: 16px;
   height: 16px;
   opacity: 0.6;
-  filter: invert(100%);
-}
-
-.light .delete-button img {
-  filter: invert(0%);
+  filter: invert(100%) grayscale(100%) brightness(80%);
+  transition: opacity 0.2s, transform 0.2s, filter 0.2s;
 }
 
 .delete-button:hover img {
   opacity: 1;
+  transform: scale(1.1);
+  filter: invert(100%) grayscale(0%) brightness(100%);
+}
+
+.light .delete-button img {
+  filter: invert(0%) grayscale(100%) brightness(40%);
+}
+
+.light .delete-button:hover img {
+  filter: invert(0%) grayscale(0%) brightness(0%);
 }
 
 .terminal {
@@ -198,7 +179,6 @@ h1 {
   font-weight: 500;
 }
 
-/* Mobile Layout */
 @media (max-width: 600px) {
   .gpa-table thead {
     display: none;
@@ -229,10 +209,6 @@ h1 {
     color: var(--muted);
     margin-right: 1rem;
     flex: 1;
-  }
-
-  .gpa-table td:last-child {
-    justify-content: flex-end;
   }
 
   .inline-result {

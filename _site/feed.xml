@@ -1,43 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-03T00:45:33+05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Umer Khan</title><subtitle>Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas.</subtitle><author><name>Umer Khan</name><email>hi@umerkn.me</email></author><entry><title type="html">Relative Grading Explained: What It Really Takes to Get an A+</title><link href="http://localhost:4000/blog/relative-grading-policy/" rel="alternate" type="text/html" title="Relative Grading Explained: What It Really Takes to Get an A+" /><published>2025-07-02T10:00:00+05:00</published><updated>2025-07-02T10:00:00+05:00</updated><id>http://localhost:4000/blog/relative-grading-explained</id><content type="html" xml:base="http://localhost:4000/blog/relative-grading-policy/"><![CDATA[<p>If you have ever wondered what it really takes to get an A+ at university, especially under a <strong>relative grading system</strong>, you are not alone. Many students at <strong>UET Lahore</strong>, especially in the <strong>Electrical Engineering Department</strong>, face this system but don’t always know how it works.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-04T20:30:43+05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Umer Khan</title><subtitle>Personal site of Umer Khan – AI undergrad exploring code, Linux, and ideas.</subtitle><author><name>Umer Khan</name><email>hi@umerkn.me</email></author><entry><title type="html">Test Blog Post</title><link href="http://localhost:4000/blog/test-blog-post/" rel="alternate" type="text/html" title="Test Blog Post" /><published>2025-07-04T10:00:00+05:00</published><updated>2025-07-04T10:00:00+05:00</updated><id>http://localhost:4000/blog/test-blog-post</id><content type="html" xml:base="http://localhost:4000/blog/test-blog-post/"><![CDATA[<h1 id="test-blog-post">Test Blog Post</h1>
 
-<h2 id="what-is-relative-grading">What Is Relative Grading?</h2>
+<p>This is a placeholder blog post. It is only here to test the blog functionality on my personal site.</p>
 
-<p>Unlike absolute grading where grades are linked to fixed percentages, relative grading compares your performance to your classmates. Your grade shows how you did compared to others in your class.</p>
+<p><strong>Stay tuned!</strong> More posts coming soon.</p>
 
-<p>At UET Lahore, many teachers use a grading curve based on the normal distribution. This means:</p>
-
-<ul>
-  <li>The average student usually gets a grade of <strong>B or B+</strong></li>
-  <li>Scores above average lead to <strong>A, A+, or B+</strong></li>
-  <li>Scores below average may get <strong>C, D, or F</strong></li>
-  <li>The distribution is balanced. About as many students get a D as get a B</li>
-</ul>
-
-<p>For a typical class of 60 students:</p>
-
-<ul>
-  <li>About 6 students will get an A+</li>
-  <li>About 6 students might fail with an F</li>
-  <li>The rest will have grades in between</li>
-</ul>
-
-<h2 id="why-your-raw-marks-dont-tell-the-whole-story">Why Your Raw Marks Don’t Tell the Whole Story</h2>
-
-<p>What really matters is where you stand compared to your classmates. For example:</p>
-
-<ul>
-  <li>If you get 40 out of 100 and the class average is 30, you might still get a B+ or even an A</li>
-  <li>But if you score 75 and the average is 85, you might get a C</li>
-</ul>
-
-<p>So the main thing is how your marks compare to others, not just your absolute score.</p>
-
-<h2 id="how-to-earn-an-a">How to Earn an A+</h2>
-
-<p>To get the top grades, you need to consistently perform better than your peers. This means working hard throughout the semester and staying ahead of the average. If you want, you can also try out my <a href="/gpa-calculator/">GPA Calculator</a> to keep track of your grades and see how you’re doing.</p>
-
-<p>Relative grading rewards students who do better than average. Focus on doing well in assignments, quizzes, and exams.</p>
+<p>Feel free to replace this with actual content once you’re ready.</p>
 
 <hr />
 
-<p><em>This article is adapted from a post by <strong>@Q33</strong> originally published on <a href="http://eeuet.ueuo.com/html/relative_grading_policy.html">eeuet.ueuo.com</a>.</em></p>]]></content><author><name>Umer Khan</name></author><summary type="html"><![CDATA[What it really takes to get an A+ under UET Lahore's relative grading system.]]></summary></entry></feed>
+<p><em>This is a placeholder blog post created for testing purposes.</em></p>]]></content><author><name>Umer Khan</name></author><summary type="html"><![CDATA[This is a placeholder blog post to test the blog functionality.]]></summary></entry></feed>

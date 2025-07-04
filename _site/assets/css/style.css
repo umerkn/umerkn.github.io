@@ -106,13 +106,8 @@ h3 {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-.hero .description {
-  font-size: 1rem;
-  color: var(--muted);
-  margin-top: 0.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.hero {
+  padding: 2.5rem 1rem 2rem;
 }
 main {
   max-width: 960px;
@@ -240,9 +235,6 @@ footer .social-icons img {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.hero {
-  padding: 2.5rem 1rem 2rem;
 }
 .card-content,
 .terminal {

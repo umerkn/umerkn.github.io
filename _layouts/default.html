@@ -5,9 +5,7 @@
       (function () {
         try {
           const theme = localStorage.getItem("theme");
-          const prefersLight = window.matchMedia(
-            "(prefers-color-scheme: light)"
-          ).matches;
+          const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
           if (theme === "light" || (!theme && prefersLight)) {
             document.documentElement.classList.add("light");
           } else {
@@ -18,10 +16,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="{{ page.description | default: site.description }}"
-    />
+    <meta name="description" content="{{ page.description | default: site.description }}" />
     <meta name="author" content="Umer Khan" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffffff" />
@@ -29,46 +24,23 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
     <title>{{ page.title }}</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/inter-v19-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/roboto-mono-v30-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <link rel="preload" href="/assets/fonts/inter-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter-v19-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/roboto-mono-v30-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <meta property="og:title" content="{{ page.title }}" />
-    <meta
-      property="og:description"
-      content="{{ page.description | default: site.description }}"
-    />
+    <meta property="og:description" content="{{ page.description | default: site.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
   </head>
 
   <body>
-    {% include header.html %} {{ content }} {% include footer.html %}
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
     <script src="/assets/js/theme.js" defer></script>
     <script src="/assets/js/menu.js" defer></script>
-    <script
-      data-goatcounter="https://umerkn.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
+    <script data-goatcounter="https://umerkn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <noscript>
       <style>
         #theme-toggle {
