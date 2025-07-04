@@ -29,6 +29,9 @@ exclude:
   - README.md
   - LICENSE
 
+include:
+  - projects/gpa-calculator
+
 defaults:
   - scope:
       path: ""
