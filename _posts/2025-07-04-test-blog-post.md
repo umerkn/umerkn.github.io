@@ -1,20 +1,16 @@
 ---
 layout: post
 title: "Test Blog Post"
-description: "This is a placeholder blog post to test the blog functionality."
+description: "Testing the blog system on my personal site."
 date: 2025-07-04 10:00:00 +0500
 author: Umer Khan
 permalink: /blog/test-blog-post/
 ---
 
-# Test Blog Post
+This is a test post to confirm that the blog functionality is working as expected on my personal site.
 
-This is a placeholder blog post. It is only here to test the blog functionality on my personal site.
-
-**Stay tuned!** More posts coming soon.
-
-Feel free to replace this with actual content once you're ready.
+**More posts coming soon.** Stay tuned!
 
 ---
 
-_This is a placeholder blog post created for testing purposes._
+_This post is just a placeholder for testing purposes and will be updated or replaced later._
