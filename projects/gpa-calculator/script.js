@@ -3,10 +3,10 @@ const courseList = [
   { name: "AICT Lab", credit: 1 },
   { name: "PF", credit: 3 },
   { name: "PF Lab", credit: 1 },
-  { name: "Discrete Math", credit: 3 },
+  { name: "Discrete Math", credit: 2 },
   { name: "Calculus", credit: 3 },
   { name: "English", credit: 3 },
-  { name: "Islamiat", credit: 2 },
+  { name: "Islamiat", credit: 3 },
 ];
 
 const gradeOptions = [
