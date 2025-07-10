@@ -6,6 +6,7 @@ const courseList = [
   { name: "Applications of ICT Lab", credit: 1 },
   { name: "Programming Fundamentals", credit: 3 },
   { name: "Programming Fundamentals Lab", credit: 1 },
+  { name: "Islamic Studies", credit: 3 }
 ];
 
 const gradeOptions = [
