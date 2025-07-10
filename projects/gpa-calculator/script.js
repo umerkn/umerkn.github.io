@@ -1,12 +1,11 @@
 const courseList = [
-  { name: "AICT", credit: 2 },
-  { name: "AICT Lab", credit: 1 },
-  { name: "PF", credit: 3 },
-  { name: "PF Lab", credit: 1 },
-  { name: "Discrete Math", credit: 2 },
-  { name: "Calculus", credit: 3 },
-  { name: "English", credit: 3 },
-  { name: "Islamiat", credit: 3 },
+  { name: "Functional English", credit: 3 },
+  { name: "Calculus and Analytic Geometry", credit: 3 },
+  { name: "Discrete Mathematics", credit: 2 },
+  { name: "Applications of ICT", credit: 2 },
+  { name: "Applications of ICT Lab", credit: 1 },
+  { name: "Programming Fundamentals", credit: 3 },
+  { name: "Programming Fundamentals Lab", credit: 1 },
 ];
 
 const gradeOptions = [
@@ -28,8 +27,8 @@ function getGpaRemark(gpa) {
   if (gpa >= 3.7) return "Excellent";
   if (gpa >= 3.3) return "Very Good";
   if (gpa >= 2.7) return "Good";
-  if (gpa >= 2.0) return "Pass";
-  return "Fail";
+  if (gpa >= 2.0) return "Satisfactory";
+  return "This shows that there’s room for improvement, but it’s only one semester. You have plenty of time to bounce back, so keep going!";
 }
 
 function createCourseRow(data = {}) {
@@ -54,7 +53,7 @@ function createCourseRow(data = {}) {
   selectCredit.className = "credit-input";
   selectCredit.innerHTML =
     '<option value="">--</option>' +
-    [1, 1.5, 2, 2.5, 3, 3.5, 4]
+    [1, 2, 3, 4]
       .map(
         (val) =>
           `<option value="${val}" ${
@@ -144,9 +143,8 @@ document.getElementById("gpa-form").addEventListener("submit", function (e) {
 
   const resultBox = document.getElementById("result");
   resultBox.innerHTML = `
-    <p><strong>Your GPA is ${gpa.toFixed(
-      2
-    )}</strong> and your performance is <strong>${remark}</strong>.</p>
+    <p><strong>Your GPA is ${gpa.toFixed(2)}</strong></p>
+    <p><strong>Remark:</strong> ${remark}</p>
     <table class="gpa-summary">
       <thead>
         <tr>
